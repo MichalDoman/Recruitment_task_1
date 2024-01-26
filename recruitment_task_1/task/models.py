@@ -1,17 +1,17 @@
-from djongo import models
+from mongoengine import Document, fields, CASCADE
 
 
-class Parts(models.Model):
-    serial_number = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    category = models.CharField(max_length=255)
-    quantity = models.IntegerField()
-    price = models.FloatField()
-    location = models.JSONField(max_length=255)
+class Parts(Document):
+    serial_number = fields.StringField(max_length=255, primary_key=True)
+    name = fields.StringField(max_length=255)
+    description = fields.StringField()
+    category = fields.StringField(max_length=255)
+    quantity = fields.IntField()
+    price = fields.FloatField()
+    location = fields.DictField()
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=255)
-    parent_name = models.CharField(max_length=255, null=True
-                                   )
+class Category(Document):
+    name = fields.StringField()
+    parent = fields.ReferenceField('Category', reverse_delete_rule=CASCADE)
+

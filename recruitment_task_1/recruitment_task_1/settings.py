@@ -1,4 +1,7 @@
 from pathlib import Path
+from mongoengine import connect
+
+connect(host="mongodb+srv://rekrutacja:BZijftwEru0oELxT@cluster11.yxu8n2k.mongodb.net/michal_domanski")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -62,12 +65,11 @@ WSGI_APPLICATION = 'recruitment_task_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'michal_domanski',
-    }
-}
+# DATABASES = {
+#     'default': {
+
+#     }
+# }
 
 
 # Password validation
