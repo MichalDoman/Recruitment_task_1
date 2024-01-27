@@ -1,4 +1,4 @@
-from mongoengine import Document, fields, CASCADE
+from mongoengine import Document, fields
 
 
 class Parts(Document):
@@ -13,5 +13,5 @@ class Parts(Document):
 
 class Categories(Document):
     name = fields.StringField()
-    parent = fields.ReferenceField('Categories', reverse_delete_rule=CASCADE)
+    parent = fields.StringField()
 
