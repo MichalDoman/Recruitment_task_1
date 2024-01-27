@@ -2,16 +2,16 @@ from mongoengine import Document, fields, CASCADE
 
 
 class Parts(Document):
-    serial_number = fields.StringField(max_length=255, primary_key=True)
-    name = fields.StringField(max_length=255)
+    serial_number = fields.StringField()
+    name = fields.StringField()
     description = fields.StringField()
-    category = fields.StringField(max_length=255)
+    category = fields.StringField()
     quantity = fields.IntField()
     price = fields.FloatField()
     location = fields.DictField()
 
 
-class Category(Document):
+class Categories(Document):
     name = fields.StringField()
-    parent = fields.ReferenceField('Category', reverse_delete_rule=CASCADE)
+    parent = fields.ReferenceField('Categories', reverse_delete_rule=CASCADE)
 

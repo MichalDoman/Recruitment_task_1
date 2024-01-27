@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'mongoengine',
     'task'
 ]
 
@@ -67,7 +69,6 @@ WSGI_APPLICATION = 'recruitment_task_1.wsgi.application'
 
 # DATABASES = {
 #     'default': {
-
 #     }
 # }
 

@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import generics
+from task.models import Parts, Categories
+from task.serializers import PartsSerializer, CategoriesSerializer
 
-# Create your views here.
+
+class PartsListView(generics.ListAPIView):
+    queryset = Parts.objects.all()
+    serializer_class = PartsSerializer
+
