@@ -25,3 +25,17 @@ class CategoriesSerializer(serializers.DocumentSerializer):
     class Meta:
         model = Categories
         fields = "__all__"
+
+    def validate(self, attrs):
+        """
+        Check if any parts are assigned to a category.
+        Check if parent category has any sub-categories assigned.
+        """
+        parts = Parts.objects.filter(category=attrs.get('name'))
+
+        if parts.exists():
+            raise ValidationError('Cannot modify category while parts are assigned to it!')
+        if Categories.objects.filter(parent=self.instance.name).exists():
+            raise ValidationError('Cannot modify parent categories if it has other categories assigned!')
+
+        return attrs

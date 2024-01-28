@@ -2,16 +2,16 @@ from mongoengine import Document, fields
 
 
 class Parts(Document):
-    serial_number = fields.StringField()
-    name = fields.StringField()
-    description = fields.StringField()
-    category = fields.StringField()
-    quantity = fields.IntField()
-    price = fields.FloatField()
-    location = fields.DictField()
+    serial_number = fields.StringField(required=True)
+    name = fields.StringField(required=True)
+    description = fields.StringField(required=True)
+    category = fields.StringField(required=True)
+    quantity = fields.IntField(required=True)
+    price = fields.FloatField(required=True)
+    location = fields.DictField(required=True)
 
 
 class Categories(Document):
-    name = fields.StringField()
+    name = fields.StringField(required=True)
     parent = fields.StringField()
 
