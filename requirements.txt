@@ -1,0 +1,5 @@
+Django==5.0.1
+pymongo==4.6.1
+djangorestframework==3.14.0
+django-rest-framework-mongoengine==3.4.1
+mongoengine==0.27.0
