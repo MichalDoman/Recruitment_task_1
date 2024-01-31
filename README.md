@@ -11,7 +11,7 @@ The usage of DRF with MongoDB has several advantages. There are decently compati
 # Searching parts
 searching for parts is possible through query parameters. E.g. /search_part/?name=N such query will find every part that contains n in the name, considering letter case.
 
-# Screens
+# Screenshots
 <p align="center">
     <img src="https://github.com/MichalDoman/Recruitment_task_1/blob/main/screenshots/screen_1.png"  width="80%" height="100%">
     <img src="https://github.com/MichalDoman/Recruitment_task_1/blob/main/screenshots/screen_2.png"  width="80%" height="100%">
