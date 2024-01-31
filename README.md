@@ -3,6 +3,11 @@ Technologies used: pymongo, Django, Django Rest Framework, mongoengine, django-r
 
 The usage of DRF with MongoDB has several advantages. There are decently compatibile, DRF has very good serialization which, at the same time makes it easy to validate data. Easy model conversion with mongoengine and generic views for every CRUD action.
 
+# Docker pull
+~~~
+    docker pull ghcr.io/michaldoman/drf_docker_ghcr:latest
+~~~
+
 # Searching parts
 searching for parts is possible through query parameters. E.g. /search_part/?name=N such query will find every part that contains n in the name, considering letter case.
 
