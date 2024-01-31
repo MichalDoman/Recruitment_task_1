@@ -7,6 +7,7 @@ The usage of DRF with MongoDB has several advantages. There are decently compati
 ~~~
 docker pull ghcr.io/michaldoman/drf_docker_ghcr:latest
 ~~~
+The app will run on: localhost:8000
 
 # Searching parts
 searching for parts is possible through query parameters. E.g. /search_part/?name=N such query will find every part that contains n in the name, considering letter case.
