@@ -5,7 +5,7 @@ The usage of DRF with MongoDB has several advantages. There are decently compati
 
 # Docker pull
 ~~~
-    docker pull ghcr.io/michaldoman/drf_docker_ghcr:latest
+docker pull ghcr.io/michaldoman/drf_docker_ghcr:latest
 ~~~
 
 # Searching parts
